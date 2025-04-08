@@ -1,0 +1,7 @@
+@import './root'; 
+
+footer{
+    color:$dark-green-color;
+    @include flex(0);
+    padding: 25px 0;
+}

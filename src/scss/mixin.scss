@@ -1,0 +1,145 @@
+
+@import './root'; 
+@mixin flex ($gap){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:$gap;
+
+    @media all and (max-width: 1220px) {
+        gap:$gap*0.8;
+    }
+
+    @media all and (max-width: 840px) {
+        gap:$gap*0.6;
+    }
+
+    @media all and (max-width: 640px) {
+        gap:$gap*0.5;
+    }
+
+    @media all and (max-width: 480px) {
+        gap:$gap*0.4;
+    }
+
+    @media all and (max-width: 420px) {
+        gap:$gap*0.3;
+    }
+}
+
+@mixin button (){
+   background-color: $light-green-color;
+   color: $dark-green-color;
+   @include sizeText($h3-font-size, 500);
+   padding: 2px 40px;
+   border-radius: 36px;
+   @include margin(5px, 5px, 5px, 5px);
+}
+
+@mixin textOverflow($max_width){
+    max-width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: $max_width;
+}
+
+@mixin margin($top, $bottom, $right, $left) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+    margin-right: $right;
+    margin-left: $left;
+  
+    @media all and (max-width: 1220px) {
+        margin-top: $top*0.8;
+        margin-bottom: $bottom*0.8;
+        margin-right: $right*0.8;
+        margin-left: $left*0.8;
+    }
+
+    @media all and (max-width: 840px) {
+        margin-top: $top*0.6;
+        margin-bottom: $bottom*0.6;
+        margin-right: $right*0.6;
+        margin-left: $left*0.6;
+    }
+
+    @media all and (max-width: 640px) {
+        margin-top: $top*0.5;
+        margin-bottom: $bottom*0.5;
+        margin-right: $right*0.5;
+        margin-left: $left*0.5;
+    }
+
+    @media all and (max-width: 480px) {
+        margin-top: $top*0.4;
+        margin-bottom: $bottom*0.4;
+        margin-right: $right*0.4;
+        margin-left: $left*0.4;
+    }
+
+    @media all and (max-width: 420px) {
+        margin-top: $top*0.3;
+        margin-bottom: $bottom*0.3;
+        margin-right: $right*0.3;
+        margin-left: $left*0.3;
+    }
+  }
+
+@mixin sizeText($size, $weight: null) {
+    font-size: $size;
+  
+    @if $weight != null {
+      font-weight: $weight;
+    }
+
+    @media all and (max-width: 1220px) {
+        font-size: $size*0.8;
+    }
+
+    @media all and (max-width: 840px) {
+        font-size: $size*0.6;
+    }
+
+    @media all and (max-width: 640px) {
+        font-size: $size*0.5;
+    }
+
+    @media all and (max-width: 480px) {
+        font-size: $size*0.4;
+    }
+
+    @media all and (max-width: 420px) {
+        font-size: $size*0.3;
+    }
+  }
+
+@mixin h_w($h, $w){
+    height: $h;
+    width: $w;
+   @media all and (max-width: 1220px) {
+       height: $h*0.8;
+       width:  $w*0.8;
+   }
+
+@media all and (max-width: 840px) {
+    height: $h*0.6;
+    width:  $w*0.6;
+}
+
+@media all and (max-width: 640px) {
+    height: $h*0.5;
+    width:  $w*0.5;
+}
+
+@media all and (max-width: 480px) {
+    height: $h*0.4;
+    width:  $w*0.4;
+}
+
+@media all and (max-width: 420px) {
+    height: $h*0.3;
+    width:  $w*0.3;
+}
+  }
+

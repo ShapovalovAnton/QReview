@@ -1,0 +1,91 @@
+div(id="surveyContent")
+  button.hover.button.SurveyBtn Повернутись
+  div.inputs_div
+    div.input_label 
+      p.input_p Назва:
+      input.name_input(type="text" id="name" name="name" placeholder="Введіть назву")
+    div.input_label.items_start
+      p.input_p Опис:  
+      textarea.name_input(height rows="4" id="about" name="about" placeholder="Введіть опис")
+  div.answer
+    p Скільки вам років?
+    div.answer_point
+      div.answer_option 
+        button.toggle_one.round
+        p Менше 18
+      button.delete_option.round 
+        div.line
+    div.answer_point
+      div.answer_option 
+        button.toggle_one.round
+        p Від 18 до 24
+      button.delete_option.round 
+        div.line
+    div.answer_point
+      div.answer_option 
+        button.toggle_one.round
+        p Від 25 до 34
+      button.delete_option.round 
+        div.line
+    div.answer_point
+      div.answer_option 
+        button.toggle_one.round
+        p Від 35 до 44
+      button.delete_option.round 
+        div.line
+    div.answer_point.answer_buttons 
+      button.round.add_option +
+      button 
+        img.settings_img(src="/Image/settings.svg")  
+  div.answer
+    div.input_label 
+      p.max_answer_p Максимальна кількість відповідей:
+      input.max_answer_input(type="number" )
+    p Ваші улюблені кольори?
+    div.answer_point
+      div.answer_option 
+        button.toggle_one
+        p Червоний
+      button.delete_option.round 
+        div.line
+    div.answer_point
+      div.answer_option 
+        button.toggle_one
+        p Синій
+      button.delete_option.round 
+        div.line
+    div.answer_point
+      div.answer_option 
+        button.toggle_one
+        p Зелений
+      button.delete_option.round 
+        div.line
+    div.answer_point
+      div.answer_option 
+        button.toggle_one
+        p Жовтий
+      button.delete_option.round 
+        div.line
+    div.answer_point
+      div.answer_option 
+        button.toggle_one
+        p Фіолетовий
+      button.delete_option.round 
+        div.line           
+    div.answer_point.answer_buttons 
+      button.round.add_option +
+      button 
+        img.settings_img(src="/Image/settings.svg") 
+  div.answer
+    p Опишіть свої улюблені каструлі:
+    textarea.answer_input(height rows="4" id="123" name="123" placeholder="Введіть опис")          
+    div.answer_point.answer_buttons 
+      button.round.add_option +
+      button 
+        img.settings_img(src="/Image/settings.svg") 
+  div.survey_buttons 
+    button.hover.button Нове питання
+    button.hover.button Зробити активним
+  
+
+

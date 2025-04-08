@@ -1,0 +1,64 @@
+/* reset.scss */
+
+/* 1. Вирівнювання відступів і полів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 2. Наслідування шрифтів */
+  html {
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* 3. Відключення стилів списків */
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  /* 4. Відключення підкреслення посилань */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* 5. Стандартизація форм */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+  }
+  
+  /* 6. Забираємо маркери у кнопок */
+  button {
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  /* 7. Зображення */
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* 8. Заголовки — без дефолтних розмірів */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: inherit;
+  }
+  
+  /* 9. Таблиці */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }

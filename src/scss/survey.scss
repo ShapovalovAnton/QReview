@@ -1,0 +1,128 @@
+@import './root'; 
+@import './mixin.scss'; 
+#surveyContent{
+    @include flex(60px);
+    flex-direction: column;
+    width:100%;
+}
+
+.inputs_div{
+    flex-direction: column;
+    @include flex(10px);
+    width:100%;
+
+}
+
+.input_label{
+    @include sizeText($p-font-size, bold);
+    color: $dark-green-color;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.items_start{
+    align-items: start;
+}
+.name_input{
+    color: $dark-green-color;
+    background-color: $light-green-color;
+    width: 88%;
+    border-radius: 12px;
+    padding: 1% 2%;
+    resize: none;
+}
+
+.input_p{
+    width:12%;
+    display: inline-block;
+}
+
+
+.answer{
+    width:100%;
+    border-radius: 24px;
+    border: 2px solid $dark-green-color;
+    padding: 2% 3.5%;
+    color: $dark-green-color;
+    font-weight: 500;
+    @include flex(15px);
+    flex-direction: column;
+    align-items: start;
+}
+
+.toggle_one{
+    @include h_w(25px, 25px);
+  background-color: $light-green-color; 
+  border: none;
+  outline: none;
+}
+
+.round{
+    border-radius: 50%;
+    background-color: $light-green-color; 
+    border: none;
+    outline: none;
+}
+
+.delete_option{
+    @include h_w(50px, 50px);
+  @include flex(0);
+}
+.answer_option{
+    @include flex(15px);
+    align-items: baseline;
+}
+
+.line{
+    background-color: $dark-green-color;
+    @include h_w(4px, 20px);
+
+}
+
+.answer_point{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.add_option{
+    @include flex(0);
+    @include h_w(70px, 70px);
+    @include sizeText(96px, 500);
+    color: $dark-green-color;
+}
+
+.settings_img{
+    @include h_w(70px, 70px);
+}
+
+.answer_buttons {
+    @include margin(10px, 0, 0, 0);
+    
+}
+
+.max_answer_p{
+    display: inline-block;
+}
+
+.max_answer_input{
+    color: $dark-green-color;
+    background-color: $light-green-color;
+    width: 12%;
+    padding-left: 5%;
+}
+
+.answer_input{
+    width: 100%;
+    color: $dark-green-color;
+    background-color: $light-green-color;
+    border-radius: 12px;
+    resize: none;
+}
+
+.survey_buttons{
+    @include flex(20px);
+    flex-direction: column;
+}

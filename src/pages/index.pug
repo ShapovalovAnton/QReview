@@ -1,9 +1,12 @@
-doctype html 
-html(lang='ua')
-head
-meta(charset='utf-8')
-title='Vite+pug'
-body
-include header.pug
-include content.pug
-include footer.pug 
+
+html(lang="ua")
+  head
+    meta(charset="utf-8")
+    title Survey Page
+    script(type="module", src="src/logic.js")
+  body
+    include ./header.pug
+    main
+      include ./survey_content.pug
+      include ./content.pug
+    include ./footer.pug

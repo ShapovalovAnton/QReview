@@ -1,0 +1,47 @@
+@import './root'; 
+@import './mixin.scss'; 
+main{
+    padding: 1% 5%;
+}
+
+.welcome{
+    
+    color: $dark-green-color;
+}
+
+.welcome_section{
+    @include margin(30px, 50px, 0, 0);
+}
+
+.survey_section{
+    @include flex (40px);
+    flex-direction: column;
+}
+
+.survey{
+    background-color: $light-green-color;
+    color: $dark-green-color;
+    @include flex(0);
+    width:100%;
+    justify-content: space-between;
+    padding: 3% 4%;
+    font-weight: 600;
+}
+
+.hover:hover{
+    color:white;
+    background-color: $dark-green-color;
+    transition: all 0.8s;
+    cursor: pointer;
+}
+
+.name_draft{
+@include textOverflow (50%);
+}
+
+.name_survey{
+    @include textOverflow (30%); 
+}
+.margin{
+    @include margin(100px, 0, 0, 0)
+}
