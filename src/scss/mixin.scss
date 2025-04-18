@@ -37,11 +37,10 @@
 }
 
 @mixin textOverflow($max_width){
-    max-width: 60%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: $max_width;
+    width: $max_width;
 }
 
 @mixin margin($top, $bottom, $right, $left) {

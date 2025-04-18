@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../public/style/main.css" rel="stylesheet" type="text/css"/>
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1AnmQ2DgPJtlLomqWa0zl1tccQTwfspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+    >
+    <title>Маркетингові опитування</title>
+</head>
+<body class="body">
+    <a class="btn btn-outline-secondary norm-btn btn_font" href="/" >
+        На головну
+    </a>
+
+    <h1 class="text-center">Список клієнтів</h1>
+    <div class="table-responsive">
+        <table class="table table-primary table-hover table-sm table_font">
+            <tr>
+                <th>Код клієнта</th>
+                <th>Ім'я</th>
+                <th>Пошта</th>
+                <th>Телефон</th>
+            </tr>
+
+            <% for (var i = 0; i < client.length; i++) { %>
+            <tr>
+                <td><%= client[i].IdClient %></td>
+                <td><%= client[i].NameClient %></td>
+                <td><%= client[i].EmailClient %></td>
+                <td><%= client[i].PhoneClient %></td>
+                <td style="background-color: white">
+                    <a class="btn btn-danger" 
+                        href="/api/client/delete/<%= client[i].IdClient %>">
+                        Видалити
+                    </a>
+                </td>
+                <td style="background-color: white">
+                    <a class="btn btn-info" 
+                        href="/api/client/<%= client[i].IdClient %>">
+                        Редагувати
+                    </a>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+    <h2 class="text-center">
+        Додати Клієнта
+    </h2>
+    
+    <form action="client" method="POST" class="text-center">
+        <div class="mb-3">
+            <label>
+                Ім'я клієнта
+                <input type="text" class="form-control" placeholder="Ім'я" id="NameClient" name="NameClient">
+            </label>
+        </div>
+    
+        <label class="form-label">
+            Пошта клієнта
+            <input type="text" placeholder="Пошта" class="form-control" id="EmailClient" name="EmailClient">
+        </label>
+
+        <label class="form-label">
+            Телефон клієнта
+            <input type="text" placeholder="Телефон" class="form-control" id="PhoneClient" name="PhoneClient">
+        </label>
+    
+        <div class="btn-submit">
+            <button type="submit" class="btn btn-outline-secondary btn_font">Додати</button>
+        </div>
+    </form>
+
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFY1zC4A8Nt+NtUVF0sA7MsXp1UJJoMp4YLfEuNSfAPJcXn/tWtIaxVXM"
+        crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

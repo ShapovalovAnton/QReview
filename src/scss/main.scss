@@ -5,7 +5,7 @@
 @import './footer.scss';
 @import './content.scss';
 @import './survey.scss';
-
+@import './choose_client.scss';
 
 html {
   @include sizeText($p-font-size);
@@ -51,3 +51,6 @@ footer{
   display: none;
 }
 
+.display_none{
+  display: none;
+}

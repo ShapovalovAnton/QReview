@@ -1,8 +1,5 @@
-- var draft = [{ name: "Найкраща каструля року", date: "22.02.2024" }, { name: "Пепсі чи Кока-кола?", date: "24.03.2025" }, { name: "Без назви", date: "06.07.2024" }]
 
-- var survey = [{ name: "Найкраща тарілка року", start_date: "25.03.2025", end_date: "25.04.2025" , status:"Активне" },{ name: "Наполеон: торт чи імператор?", start_date: "25.03.2024", end_date: "25.04.2025", status:"Завершене"}]
-
-div(id="content")
+div(id="content")(style="display: none")
   article
     section.welcome_section
       h1.welcome Вітаємо!
@@ -10,16 +7,9 @@ div(id="content")
     section.survey_section
       h3 Ваші чернетки
       p Тут зібрані усі опитування, що поки не стали активними
-      each item in draft
-        button.hover.survey.SurveyBtn
-          p.name_draft= item.name
-          p= item.date
+      div#draft-container.survey_section
       button.hover.button.SurveyBtn Створити
     section.survey_section.margin
       h3 Активні опитування
       p Тут зібрані усі активні та завершені опитування
-      each item in survey
-        button.hover.survey.SurveyBtn
-          p.name_survey= item.name
-          p= item.start_date + '-' + item.end_date
-          p= item.status
+      div#active-container.survey_section

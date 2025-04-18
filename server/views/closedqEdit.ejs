@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="">
+  <title>Редагування</title>
+</head>
+<body>
+  <h1 class="text-center">Редагувати Закрите питання</h1>
+  <form action="" method="POST" class="text-center">
+    <div class="mb-3">
+        <label>
+            Код опитування
+            <input type="text" class="form-control" placeholder="Код" id="IdSurvey" name="IdSurvey"
+            value="<%= question.IdSurvey %>">
+        </label>
+    </div>
+
+    <label class="form-label">
+        Текст питання
+        <input type="text" placeholder="Текст" class="form-control" id="TextClQuestion" name="TextClQuestion"
+        value="<%= question.TextClQuestion %>">
+    </label>
+
+    <label class="form-label">
+        Порядковий номер
+        <input type="number" class="form-control" id="OrdNumber" name="OrdNumber"
+        value="<%= question.OrdNumber %>">
+    </label>
+
+    <label class="form-label">
+      Максимальна кількість відповідей
+      <input type="number" class="form-control" id="MaxNAnswer" name="MaxNAnswer"
+      value="<%= question.MaxNAnswer %>">
+  </label>
+    <br>
+    <button type="submit" class="btn btn-primary" formaction="/api/closedq/put/<%= question.IdClQuestion %>">Редагувати</button>
+    <a class="btn btn-info" href="/api/closedq">Повернутись</a>
+  </form>
+</body>
+</html>

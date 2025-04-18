@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="">
+  <title>Редагування</title>
+</head>
+<body>
+  <h1 class="text-center">Редагувати опитування</h1>
+  <form action="" method="POST" class="text-center">
+    <div class="mb-3">
+      <label>
+          Назва
+          <input type="text" class="form-control" placeholder="Ім'я" id="NameSurvey" name="NameSurvey"
+          value="<%= Survey[0].NameSurvey %>">
+      </label>
+  </div>
+
+  <label class="form-label">
+      Код клієнта
+      <input type="text" placeholder="Код" class="form-control" id="IdClient" name="IdClient"
+      value="<%= Survey[0].IdClient %>">
+  </label>
+  <br>
+
+  <label class="form-label">
+      Опис
+      <input type="text" placeholder="Опис" class="form-control" id="AboutSurvey" name="AboutSurvey"
+      value="<%= Survey[0].AboutSurvey %>">
+  </label>
+
+  <br>
+
+  <label class="form-label">
+      Дата створення
+      <input type="date" placeholder="Дата" class="form-control" id="DateCreateSurvey" name="DateCreateSurvey"
+      value="<%= Survey[0].DateCreateSurvey %>">
+  </label>
+  <br>
+  <label class="form-label">
+      Статус
+      <input type="text" placeholder="Статус" class="form-control" id="StatusSurvey" name="StatusSurvey"
+      value="<%= Survey[0].StatusSurvey %>">
+  </label>
+  <br>
+  <label class="form-label">
+      Дата початку
+      <input type="date" placeholder="Дата" class="form-control" id="StartDateSurvey" name="StartDateSurvey"
+      value="<%= Survey[0].StartDateSurvey %>">
+  </label>
+
+  <label class="form-label">
+      Дата завершення
+      <input type="date" placeholder="Дата" class="form-control" id="FinishDateSurvey" name="FinishDateSurvey"
+      value="<%= Survey[0].FinishDateSurvey %>">
+  </label>
+    <br>
+    <button type="submit" class="btn btn-primary" formaction="/api/survey/put/<%= Survey[0].IdSurvey %>">Редагувати</button>
+    <a class="btn btn-info" href="/api/survey">Повернутись</a>
+  </form>
+</body>
+</html>

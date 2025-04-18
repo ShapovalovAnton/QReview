@@ -16,6 +16,7 @@ main{
 .survey_section{
     @include flex (40px);
     flex-direction: column;
+    width: 100%;
 }
 
 .survey{
@@ -37,11 +38,21 @@ main{
 
 .name_draft{
 @include textOverflow (50%);
+text-align: start;
 }
 
 .name_survey{
     @include textOverflow (30%); 
+    text-align: start;
 }
 .margin{
     @include margin(100px, 0, 0, 0)
+}
+
+.dates{
+    width: 38%;
+}
+
+.status{
+    width:20%;
 }

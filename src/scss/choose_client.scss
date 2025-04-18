@@ -1,0 +1,54 @@
+@import './mixin.scss'; 
+
+.choose_client{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.client_list{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    padding: 2%;
+    width: 80%;
+    border-radius: 24px;
+    border: 3px solid $light-green-color;
+    align-items: center;
+}
+
+.client_panel{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    width: 100%;
+    align-items: center;
+}
+
+.client{
+    padding: 4%;
+    display: flex;
+    width: 95%;
+    gap:20px;
+    align-items: center;
+    border-radius: 24px;
+    border: 2px solid $light-green-color;
+    
+}
+
+.client:hover{
+    background-color: $light-green-color;
+    cursor: pointer;
+    color: $dark-green-color;
+    transition: all 0.5s;
+}
+
+.email{
+    @include sizeText(18px);
+}
+
+.client_img{
+    width: 10%;
+}

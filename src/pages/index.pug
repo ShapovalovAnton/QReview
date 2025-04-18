@@ -3,8 +3,9 @@ html(lang="ua")
   head
     meta(charset="utf-8")
     title Survey Page
-    script(type="module", src="src/logic.js")
+    script(type="module")
   body
+    include ./choose_client.pug
     include ./header.pug
     main
       include ./survey_content.pug
