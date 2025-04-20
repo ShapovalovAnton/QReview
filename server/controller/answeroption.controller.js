@@ -3,7 +3,7 @@ const AnswerOption = require('../model/answeroption.model');
 exports.findAll = function (req, res) {
     AnswerOption.findAll(function (err, option) {
         if (err) res.send(err);
-        res.send(data);
+        res.send(option);
     });
 };
 

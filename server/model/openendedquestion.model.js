@@ -13,7 +13,14 @@ OpenEndedQuestion.create = function (newQuestion, result) {
             console.log("error", err);
             result(null, err);
         } else {
-            result(null, res.insertId);
+            connection.query("SELECT * FROM openendedquestion WHERE IdOpQuestion = ?", [res.insertId], function (err2, rows) {
+                if (err2) {
+                    console.log("error", err2);
+                    result(null, err2);
+                } else {
+                    result(null, rows[0]);
+                }
+            });
         }
     });
 };

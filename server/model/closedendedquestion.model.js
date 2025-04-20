@@ -9,14 +9,21 @@ const ClosedEndedQuestion = function (question) {
 };
 
 ClosedEndedQuestion.create = function (newQuestion, result) {
-    connection.query("INSERT INTO closedendedquestion SET ?", newQuestion, function (err, res) {
-        if (err) {
-            console.log("error", err);
-            result(null, err);
+  connection.query("INSERT INTO closedendedquestion SET ?", newQuestion, function (err, res) {
+    if (err) {
+      console.log("error", err);
+      result(err, null);
+    } else {
+      connection.query("SELECT * FROM closedendedquestion WHERE IdClQuestion = ?", [res.insertId], function (err2, rows) {
+        if (err2) {
+          console.log("error", err2);
+          result(err2, null);
         } else {
-            result(null, res.insertId);
+          result(null, rows[0]); 
         }
-    });
+      });
+    }
+  });
 };
 
 ClosedEndedQuestion.findById = function (id, result) {

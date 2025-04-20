@@ -17,8 +17,14 @@ survey.create = function (newSurvey, result) {
             console.log("error", err);
             result(null, err);
         } else {
-            console.log(res.insertId);
-            result(null, res.insertId);
+            connection.query("SELECT * FROM survey WHERE IdSurvey = ?", [res.insertId], function (err2, rows) {
+                if (err2) {
+                    console.log("error", err2);
+                    result(null, err2);
+                } else {
+                    result(null, rows[0]);
+                }
+            });
         }
     });
 };

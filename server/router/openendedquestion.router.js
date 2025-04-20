@@ -5,11 +5,11 @@ const OpenEndedQuestionController = require('../controller/openendedquestion.con
 router.get('/', OpenEndedQuestionController.findAll);
 router.post('/', OpenEndedQuestionController.create);
 router.get('/:id', OpenEndedQuestionController.findById);
-// router.put('/:id', OpenEndedQuestionController.update);
-// router.delete('/:id', OpenEndedQuestionController.delete);
+router.put('/:id', OpenEndedQuestionController.update);
+router.delete('/:id', OpenEndedQuestionController.delete);
 
-router.post('/put/:id', OpenEndedQuestionController.update);
+// router.post('/put/:id', OpenEndedQuestionController.update);
 
-router.get('/delete/:id', OpenEndedQuestionController.delete);
+// router.get('/delete/:id', OpenEndedQuestionController.delete);
 
 module.exports = router;

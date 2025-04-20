@@ -94,6 +94,17 @@
     color: $dark-green-color;
 }
 
+.add_option:hover, .delete_option:hover{
+    background-color: $dark-green-color;
+    color: $light-green-color;
+    transition: all 0.8s
+}
+
+.delete_option:hover .line{
+    background-color: $light-green-color;
+    transition: all 0.8s
+}
+
 .settings_img{
     @include h_w(70px, 70px);
 }
@@ -120,9 +131,17 @@
     background-color: $light-green-color;
     border-radius: 12px;
     resize: none;
+    padding-right: 2%;
+    padding-left: 2%; 
 }
 
 .survey_buttons{
-    @include flex(20px);
-    flex-direction: column;
+    @include flex(0);
+    width: 100%;
+    justify-content: start;
+}
+
+
+.survey_buttons .button{
+    border-radius: 0;
 }
